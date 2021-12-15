@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block page_title %}{{ page_title }}{% endblock %}
+{% block content %}
+
+    <h1>Document Details</h1>
+
+    <b>Document ID</b>
+    <div class="Doc ID">{{doc.id}}</div><br>
+
+    <b>Document Username</b>
+    <div class="Doc Username">{{doc.username}}</div><br>
+
+    <b>Document Text</b>
+    <div class="Doc Text">{{doc.description}}</div><br>
+
+    <b>Document Date</b>
+    <div class="Doc Date">{{doc.doc_date}}</div><br>
+
+    <b>Document URL</b>
+    <div class="Doc url">{{doc.url}}</div><br>
+
+    <b>Document #Favorites</b>
+    <div class="Doc favs">{{doc.favs}}</div><br>
+
+    <b>Document #Retweets</b>
+    <div class="Doc retws">{{doc.retweets}}</div><br>
+
+    <b>Document Hashtahs</b>
+    <div class="Doc hash">{{doc.hashtags}}</div><br>
+
+    <hr>
+
+    <div><a href="/stats" >Search Engine Statistics</a></div>
+    <div><a href="{{'search?search-query='+query+'&from-document=1'}}">Go Back</a></div>
+
+{% endblock %}
+

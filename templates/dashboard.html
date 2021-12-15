@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block page_title %}{{ page_title }}{% endblock %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - IRWA Search Engine</title>
+</head>
+<body>
+
+<h2>Results Analysis </h2> <!--title-->
+<p></p>
+<h4>Clicks on document per rank</h4>
+<img src="{{ url_for('static', filename='plot_1.png') }}" alt="Plot 1" width="500" height="333">
+<p></p><p></p>
+
+<h2>Users Analysis</h2> <!--title-->
+<p></p>
+<h4>Total number of queries sent</h4>
+<img src="{{ url_for('static', filename='plot_2.png') }}" alt="Plot 2" width="500" height="333">
+<p></p>
+<h4>Platforms used</h4>
+<img src="{{ url_for('static', filename='plot_3.png') }}" alt="Plot 3" width="500" height="333">
+<p></p>
+<h4>Browsers used</h4>
+<img src="{{ url_for('static', filename='plot_4.png') }}" alt="Plot 4" width="500" height="333">
+<p></p><p></p>
+
+<h2>Query Analysis</h2> <!--title-->
+<p></p>
+<h4>Query Popularity</h4>
+<img src="{{ url_for('static', filename='plot_5.png') }}" alt="Plot 5" width="500" height="333">
+<p></p>
+<h4>How many terms per query</h4>
+<img src="{{ url_for('static', filename='plot_6.png') }}" alt="Plot 6" width="500" height="333">
+<p></p><p></p>
+
+<h2>Docs analysis</h2> <!--title-->
+<p></p>
+<h4>Document Popularity (clicks)</h4>
+<img src="{{ url_for('static', filename='plot_7.png') }}" alt="Plot 7" width="500" height="333">
+<p></p>
+<h4>Document Popularity (clicked rank)</h4>
+<img src="{{ url_for('static', filename='plot_8.png') }}" alt="Plot 8" width="500" height="333">
+<p></p>
+<h4>Document Popularity (dwell time)</h4>
+<img src="{{ url_for('static', filename='plot_9.png') }}" alt="Plot 9" width="500" height="333">
+<p></p>
+
+</body>
+</html>
+
+{% endblock %}
